@@ -39,13 +39,16 @@ https://laundry-system-b4v2.onrender.com
 
 ### Create Order
 POST /orders
-![alt text](create-order.png)
+![post](create.png)
 
 ### Get Orders
 GET /orders
+![get](create-order.png)
+
 
 ### Update Status
 PUT /orders/:id/status
+![put](put.png)
 
 ### Dashboard
 GET /dashboard
