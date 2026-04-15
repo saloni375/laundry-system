@@ -52,6 +52,7 @@ PUT /orders/:id/status
 
 ### Dashboard
 GET /dashboard
+![dashboard](dashboard.png)
 
 ---
 
