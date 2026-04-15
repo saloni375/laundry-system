@@ -1,62 +1,75 @@
-I used ChatGPT to generate the initial Express server setup.
-The generated code worked but I understood and modified it.
+# 🧺 Laundry Order Management System
 
-I used ChatGPT to set up MongoDB connection using Mongoose.
+## 📌 Project Overview
+This is a backend system for a dry cleaning store to manage orders, track status, calculate billing, and view dashboard analytics.
 
-Issue:
-- Initial code did not handle connection errors properly
+---
 
-Improvement:
-- Added error handling and console logs
+## 🚀 Features
 
-Issue faced:
-MongoDB connection failed due to deprecated options.
+- Create laundry orders
+- Auto calculate total billing
+- Update order status (RECEIVED, PROCESSING, READY, DELIVERED)
+- View all orders
+- Filter orders
+- Dashboard with:
+  - Total orders
+  - Total revenue
+  - Orders by status
 
-Fix:
-Removed useNewUrlParser and useUnifiedTopology as they are no longer required in latest Mongoose versions.
+---
 
-AI generated the schema but:
+## 🛠 Tech Stack
 
-Issues:
-- Status was set to 'pending' which is not part of required states
-- No validation on status values
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- Render (Deployment)
 
-Improvements:
-- Added enum validation for status
-- Set default status to "RECEIVED" as per requirements
+---
 
-I tested the API using Postman.
+## 🔗 Live API
 
-The system correctly:
-- Calculated total bill
-- Stored data in MongoDB
-- Assigned default status
-- Generated unique IDs automatically
+https://laundry-system-b4v2.onrender.com
 
-This confirmed that the end-to-end flow works successfully.
+---
 
-I implemented a status update API using PUT method.
+## 📡 API Endpoints
 
-The API successfully updates order status in MongoDB.
-I added validation to allow only valid statuses (RECEIVED, PROCESSING, READY, DELIVERED).
+### Create Order
+POST /orders
 
-Tested using Postman and verified correct updates.
+### Get Orders
+GET /orders
 
-I implemented a GET API to fetch orders.
+### Update Status
+PUT /orders/:id/status
 
-Features:
-- Fetch all orders
-- Filter by status, customer name, and phone
+### Dashboard
+GET /dashboard
 
-AI helped with base logic, but I structured filters manually for clarity.
+---
 
-I implemented a dashboard API to provide insights.
+## 🤖 AI Usage
 
-It returns:
-- Total number of orders
-- Total revenue generated
-- Count of orders by status
+- Used ChatGPT for backend structure
+- Used AI for debugging MongoDB connection issues
+- Used AI for deployment guidance on Render
 
-This helps simulate real business analytics.
+---
 
+## ⚠️ Tradeoffs
 
+- No frontend UI (API-based project)
+- Basic validation only
+- No authentication implemented
+
+---
+
+## 📈 Future Improvements
+
+- Add frontend (React)
+- Add login/auth system
+- Add better validation
+- Deploy frontend with backend
