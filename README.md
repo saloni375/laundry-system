@@ -39,6 +39,7 @@ https://laundry-system-b4v2.onrender.com
 
 ### Create Order
 POST /orders
+![alt text](create-order.png)
 
 ### Get Orders
 GET /orders
